@@ -16,9 +16,10 @@ type Props = IPressableProps & {
 };
 
 export const Order: FunctionComponent<Props> = ({ data, ...rest }) => {
-  const { colors } = useTheme()
+  const theme = useTheme();
+  const { colors } = theme;
 
-  const statusColor = getStatusColor(data.status);
+  const statusColor = getStatusColor(data.status, theme);
 
   return (
     <Pressable {...rest}>

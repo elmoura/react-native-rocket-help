@@ -1,4 +1,4 @@
-import { Text, Button, IButtonProps, useTheme } from 'native-base';
+import { Text, Button, IButtonProps } from 'native-base';
 import { getStatusColor } from '../utils/getStatusColor';
 
 export enum OrderStatuses {
@@ -13,8 +13,6 @@ type Props = IButtonProps & {
 }
 
 export function Filter({ title, type, isActive = false, ...rest }: Props) {
-  const { colors } = useTheme()
-
   const colorType = getStatusColor(type);
 
   return (
