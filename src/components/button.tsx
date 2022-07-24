@@ -11,6 +11,7 @@ export const Button = ({ title, ...rest }: Props) => {
       h={14}
       fontSize='sm'
       rounded='sm'
+      mx={4}
       _pressed={{ bg: 'green.500' }}
       {...rest}
     >
